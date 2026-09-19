@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>朱洛瑶 · 作品集 | 视频 / 账号 / AI 产品 / 策划 / OKR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root{
+    --bg: #faf7f2;           --bg: oklch(97.3% 0.006 88);
+    --surface: #fdfbf7;      --surface: oklch(98.5% 0.004 88);
+    --ink: #211c16;          --ink: oklch(22.5% 0.012 70);
+    --ink-2: #6b6154;        --ink-2: oklch(48% 0.012 70);
+    --ink-3: #a29a8e;        --ink-3: oklch(66% 0.008 70);
+    --line: #e7e0d5;         --line: oklch(90.5% 0.008 88);
+    --line-strong: #cfc6b8;  --line-strong: oklch(80% 0.01 88);
+    --accent: #4f6f52;       --accent: oklch(46% 0.06 150);
+    --accent-deep: #3c5740;  --accent-deep: oklch(37% 0.06 150);
+
+    --font-en: "Space Grotesk", "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif;
+    --font-zh: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+    --font-serif: "Noto Serif SC", "Songti SC", "STSong", serif;
+
+    --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family: var(--font-zh);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection{background: var(--accent); color: var(--bg);}
+  a{color: inherit;}
+
+  .figure{stroke:currentColor; fill:none; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round; display:block;}
+
+  .wrap{max-width: 960px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 48px);}
+
+  /* ===== 顶栏 ===== */
+  .topbar{
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.1) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner{
+    max-width: 960px; margin:0 auto; padding: 0 clamp(20px,5vw,48px);
+    height: 56px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .topbar .mark{display:flex; align-items:center; gap: var(--s2);}
+  .topbar .mark svg{width:26px; height:26px;}
+  .topbar .mark span{font-family: var(--font-en); font-weight:600; font-size:14px; letter-spacing:.06em;}
+  .topbar nav{display:flex; gap: var(--s4); align-items:center;}
+  .topbar nav a{font-size:13px; color:var(--ink-2); text-decoration:none; letter-spacing:.03em; transition:color .2s var(--ease-out);}
+  .topbar nav a:hover{color:var(--ink);}
+  .topbar .print{
+    font-family: var(--font-en); font-size:13px; font-weight:600; letter-spacing:.03em;
+    background: var(--ink); color: var(--bg); border:1px solid var(--ink);
+    padding: 7px 16px; cursor:pointer; transition:background .2s var(--ease-out), color .2s var(--ease-out);
+  }
+  .topbar .print:hover{background:transparent; color:var(--ink);}
+
+  /* ===== 头部 ===== */
+  .hero{padding: clamp(48px, 7vw, 80px) 0 var(--s7); border-bottom:1px solid var(--line);}
+  .hero-grid{display:grid; grid-template-columns:1fr auto; gap:var(--s7); align-items:center;}
+  .hero-main .welcome{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family: var(--font-serif);
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--ink);
+    letter-spacing:.02em;
+    margin-bottom: var(--s6);
+    position:relative;
+    padding-bottom: 7px;
+  }
+  .hero-main .welcome .wf{width:20px; height:20px; flex-shrink:0;}
+  .hero-main .welcome::after{
+    content:''; position:absolute; left:0; bottom:0; width:100%; height:3px; border-radius:3px;
+    background: linear-gradient(90deg, #E85D75 0%, #F2C14E 34%, #7FB34A 67%, #8A5FB5 100%);
+  }
+  .hero-main h1{
+    font-family:var(--font-zh); font-weight:600;
+    font-size:clamp(34px, 5vw, 52px); line-height:1.1; letter-spacing:.01em; display:inline-block;
+  }
+  .hero-main h1 .leah{font-family:var(--font-en); font-weight:600; font-size:.5em; color:var(--ink-3); letter-spacing:.04em; margin-left:var(--s2); vertical-align:middle;}
+  .hero-main .school{font-family:var(--font-serif); font-size:clamp(15px,1.6vw,18px); color:var(--ink-2); margin-top:var(--s4);}
+  .hero-main .meta{margin-top:var(--s5); display:flex; flex-wrap:wrap; gap:var(--s2) var(--s5); font-size:14px; color:var(--ink-2); letter-spacing:.02em;}
+  .hero-main .meta b{color:var(--ink); font-weight:600;}
+  .hero-main .tags{margin-top:var(--s5); display:flex; flex-wrap:wrap; gap:var(--s2);}
+  .hero-main .tags span{
+    font-size:13px; padding:5px 14px; border:1px solid var(--line-strong); border-radius:999px;
+    color:var(--ink-2); letter-spacing:.02em; display:inline-flex; align-items:center; gap:6px;
+  }
+  .hero-main .tags span::before{content:''; width:7px; height:7px; border-radius:50%;}
+  .hero-main .tags span.hot{border-color:var(--accent); color:var(--accent-deep); font-weight:600;}
+  .hero-main .tags span.hot::before{background:#E85D75;}
+  .hero-main .tags span:nth-child(2)::before{background:#8A5FB5;}
+  .hero-main .tags span:nth-child(3)::before{background:#F2C14E;}
+  .hero-main .tags span:nth-child(4)::before{background:#7FB34A;}
+  .hero-main .tags span:nth-child(5)::before{background:#F0A048;}
+
+  .fig-box{position:relative;}
+  .fig-box .figure{width:clamp(130px, 18vw, 180px); height:clamp(160px, 22vw, 220px); color:var(--ink);}
+  .fig-box .doodle{position:absolute; width:40px; height:40px;}
+  .fig-box .d1{top:-6px; right:-6px; animation:floaty 4s ease-in-out infinite;}
+  .fig-box .d2{bottom:10px; left:-10px; animation:floaty 5s ease-in-out infinite reverse;}
+
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(-4deg);}50%{transform:translateY(-10px) rotate(4deg);}}
+
+  /* ===== 滚动字幕 ===== */
+  .marquee{border-bottom:1px solid var(--line); padding:var(--s3) 0; overflow:hidden; white-space:nowrap; background:var(--surface);}
+  .marquee .track{display:inline-block; animation:scroll 32s linear infinite;}
+  .marquee span{font-family:var(--font-en); font-size:13px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3); margin-right:var(--s7); display:inline-flex; align-items:center; gap:var(--s3);}
+  .marquee span b{color:var(--ink); font-weight:600;}
+  .marquee span i{font-style:normal; width:8px; height:8px; border-radius:50%; display:inline-block;}
+  .marquee span:nth-child(6n+1) i{background:#E85D75;}
+  .marquee span:nth-child(6n+2) i{background:#8A5FB5;}
+  .marquee span:nth-child(6n+3) i{background:#F2C14E;}
+  .marquee span:nth-child(6n+4) i{background:#7FB34A;}
+  .marquee span:nth-child(6n+5) i{background:#F0A048;}
+  .marquee span:nth-child(6n) i{background:var(--accent);}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ===== 区块通用 ===== */
+  section.block{padding:var(--s8) 0; border-bottom:1px solid var(--line); position:relative;}
+  .block-head{display:flex; align-items:center; gap:var(--s4); margin-bottom:var(--s4);}
+  .block-head .no{font-family:var(--font-en); font-weight:600; font-size:13px; letter-spacing:.12em; color:var(--accent);}
+  .block-head .en{font-family:var(--font-en); font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); margin-left:auto;}
+
+  .teacup-wrap{position:relative; width:84px; height:109px; flex-shrink:0;}
+  .teacup-wrap .teacup{width:100%; height:100%; color:var(--liquid);}
+  .teacup-wrap .topfruit{position:absolute; top:2px; right:2px; width:26px; height:26px;}
+  .teacup-wrap .tlabel{
+    position:absolute; left:50%; top:61%; transform:translate(-50%,-50%) rotate(-3deg);
+    font-size:12px; font-weight:700; color:#3b2a1e; white-space:nowrap; letter-spacing:.01em;
+    text-shadow:0 1px 0 #fff;
+  }
+  .flavor-strawberry{--liquid:#F5B0C4;}
+  .flavor-lemon{--liquid:#F5DC7E;}
+  .flavor-orange{--liquid:#F6C078;}
+  .flavor-kiwi{--liquid:#BCD97E;}
+  .flavor-grape{--liquid:#C5A0E8;}
+  .flavor-pomelo{--liquid:#F6B090;}
+  .flavor-matcha{--liquid:#A6D39A;}
+  .flavor-blueberry{--liquid:#9FAEE0;}
+
+  .num{font-family:var(--font-en); font-weight:700; color:var(--accent-deep);}
+  b.hl{font-weight:600; color:var(--ink);}
+
+  /* ===== 能力简述 ===== */
+  .lead{font-size:15px; color:var(--ink-2); line-height:1.95; max-width:72ch; margin-bottom:var(--s5);}
+  .lead b{color:var(--ink); font-weight:600;}
+  .lead .accent{color:var(--accent-deep); font-weight:600;}
+
+  /* ===== 作品分组小标题 ===== */
+  .subhead{
+    font-family: var(--font-en); font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+    color: var(--ink-3); margin: var(--s5) 0 var(--s3);
+    display:flex; align-items:center; gap: var(--s3);
+  }
+  .subhead::after{content:''; flex:1; height:1px; background: var(--line);}
+
+  /* ===== 作品卡片 ===== */
+  .links{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:var(--s3);}
+  .link{display:flex; flex-direction:column; gap:var(--s1); padding:var(--s4); border:1.5px solid var(--ink); border-radius:12px; text-decoration:none; background:#fff; box-shadow:4px 4px 0 var(--line-strong); transition:border-color .2s var(--ease-out), transform .2s var(--ease-out), box-shadow .2s var(--ease-out);}
+  .link:hover{border-color:var(--accent); transform:translateY(-3px); box-shadow:6px 6px 0 var(--line-strong);}
+  .link .name{font-size:14.5px; color:var(--ink); font-weight:600; display:flex; align-items:center; gap:6px;}
+  .link .name::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--accent); flex-shrink:0;}
+  .link.video .name::before{background:#E85D75;}
+  .link.doc .name::before{background:#8A5FB5;}
+  .link.site .name::before{background:#7FB34A;}
+  .link .sub{font-size:12.5px; color:var(--ink-3); letter-spacing:.02em; line-height:1.6;}
+  .link .go{font-family:var(--font-en); font-size:12px; color:var(--accent); margin-top:var(--s1); letter-spacing:.02em;}
+
+  /* ===== 页脚 ===== */
+  footer{padding:var(--s7) 0 var(--s8); text-align:center;}
+  footer .fig{width:96px; height:96px; margin:0 auto var(--s4); color:var(--ink);}
+  footer p{font-family:var(--font-en); font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3);}
+
+  .reveal{opacity:1; transform:none; transition:opacity .6s var(--ease-out), transform .6s var(--ease-out);}
+  .reveal.is-anim{opacity:0; transform:translateY(22px);}
+  .reveal.is-anim.in{opacity:1; transform:translateY(0);}
+
+  @media (max-width:760px){
+    .hero-grid{grid-template-columns:1fr;}
+    .fig-box{order:-1; display:flex; justify-content:center;}
+    .topbar nav a{display:none;}
+  }
+  @media print{
+    .topbar,.marquee{display:none;}
+    body{background:#fff; color:#000;}
+    .reveal{opacity:1 !important; transform:none !important;}
+    section.block,.hero{border-color:#ddd;}
+    a{text-decoration:none;}
+    .link{box-shadow:none;}
+    .teacup-wrap{filter:grayscale(1);}
+    .fig-box .doodle{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1 !important; transform:none !important; transition:none !important;}
+    .marquee .track{animation:none !important;}
+    .fig-box .doodle{animation:none !important;}
+    *{transition-duration:.01ms !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== 手绘小女孩（双马尾拿电脑）+ 奶茶杯 + 水果 ==================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="figure" viewBox="0 0 260 320">
+      <ellipse fill="currentColor" stroke="none" cx="76" cy="92" rx="14" ry="28"/>
+      <ellipse fill="currentColor" stroke="none" cx="184" cy="92" rx="14" ry="28"/>
+      <circle fill="currentColor" stroke="none" cx="76" cy="66" r="7"/>
+      <circle fill="currentColor" stroke="none" cx="184" cy="66" r="7"/>
+      <circle cx="130" cy="66" r="42"/>
+      <path fill="currentColor" stroke="none" d="M90 58 Q90 28 130 28 Q170 28 170 58 Q150 48 130 48 Q110 48 90 58 Z"/>
+      <circle fill="currentColor" stroke="none" cx="112" cy="72" r="5"/>
+      <circle fill="currentColor" stroke="none" cx="148" cy="72" r="5"/>
+      <path d="M116 86 Q130 94 144 86" stroke-width="3"/>
+      <path d="M86 154 Q82 118 130 118 Q178 118 174 154 L186 234 Q188 244 178 244 L82 244 Q72 244 74 234 Z"/>
+      <path d="M80 148 L180 148 L174 198 L86 198 Z"/>
+      <path d="M94 160 L166 160 M94 170 L150 170 M94 180 L160 180" stroke-width="2.6"/>
+      <path d="M74 202 L186 202 L192 218 L68 218 Z"/>
+      <path d="M88 138 Q60 154 72 184"/>
+      <path d="M172 138 Q200 154 188 184"/>
+    </symbol>
+
+    <symbol id="teacup" viewBox="0 0 100 130">
+      <path d="M74 12 L60 40" stroke="#3B2A1E" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M18 40 L82 40 L72 112 Q70 122 58 122 L42 122 Q30 122 28 112 Z" fill="#FDFBF7" stroke="#3B2A1E" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M26 52 L74 52 L68 116 Q67 120 58 120 L42 120 Q33 120 32 116 Z" fill="currentColor"/>
+      <path d="M18 40 Q16 24 28 26 Q34 16 42 20 Q48 12 56 16 Q64 12 72 20 Q80 26 82 40 Q70 34 62 40 Q52 34 44 40 Q34 34 18 40 Z" fill="#FFF9F0" stroke="#3B2A1E" stroke-width="3" stroke-linejoin="round"/>
+      <g transform="rotate(-3 50 80)">
+        <rect x="20" y="64" width="60" height="32" rx="5" fill="#FFFDF6" stroke="#3B2A1E" stroke-width="2"/>
+        <path d="M28 73 L72 73" stroke="#3B2A1E" stroke-width="1.4" opacity="0.2"/>
+      </g>
+    </symbol>
+
+    <symbol id="strawberry" viewBox="0 0 50 50">
+      <path d="M25 10 C30 16 36 22 36 30 C36 38 31 44 25 44 C19 44 14 38 14 30 C14 22 20 16 25 10 Z" fill="#E85D75" stroke="#3B2A1E" stroke-width="2.4"/>
+      <path d="M20 16 L20 14 M25 13 L25 11 M30 16 L30 14" fill="none" stroke="#3B2A1E" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M18 30 L23 33 M26 35 L31 32 M24 25 L22 29 M28 26 L27 30 M18 36 L19 40 M32 36 L31 40" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    </symbol>
+    <symbol id="lemon" viewBox="0 0 50 50">
+      <circle cx="25" cy="25" r="20" fill="#F2C14E" stroke="#3B2A1E" stroke-width="2.4"/>
+      <circle cx="25" cy="25" r="12" fill="#FDF3CE" stroke="#3B2A1E" stroke-width="2"/>
+      <path d="M25 13 L25 20 M25 30 L25 37 M13 25 L20 25 M30 25 L37 25 M16 16 L21 21 M29 29 L34 34 M34 16 L29 21 M21 29 L16 34" fill="none" stroke="#3B2A1E" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="orange" viewBox="0 0 50 50">
+      <circle cx="25" cy="25" r="20" fill="#F0A048" stroke="#3B2A1E" stroke-width="2.4"/>
+      <circle cx="25" cy="25" r="12" fill="#FAD9A8" stroke="#3B2A1E" stroke-width="2"/>
+      <path d="M25 5 L25 13 M25 37 L25 45 M5 25 L13 25 M37 25 L45 25 M11 11 L16 16 M34 34 L39 39 M39 11 L34 16 M16 34 L11 39" fill="none" stroke="#3B2A1E" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="kiwi" viewBox="0 0 50 50">
+      <circle cx="25" cy="25" r="20" fill="#7FB34A" stroke="#3B2A1E" stroke-width="2.4"/>
+      <circle cx="25" cy="25" r="13" fill="#C9E79A" stroke="#3B2A1E" stroke-width="2"/>
+      <circle cx="25" cy="25" r="4" fill="#F7F3DC" stroke="#3B2A1E" stroke-width="1.8"/>
+      <path d="M25 5 L25 11 M25 39 L25 45 M5 25 L11 25 M39 25 L45 25 M11 11 L16 16 M34 34 L39 39 M39 11 L34 16 M16 34 L11 39" fill="none" stroke="#3B2A1E" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="grape" viewBox="0 0 50 50">
+      <path d="M25 8 Q22 4 19 6 M25 10 L25 16" fill="none" stroke="#3B2A1E" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="19" cy="21" r="7" fill="#8A5FB5" stroke="#3B2A1E" stroke-width="2.2"/>
+      <circle cx="31" cy="21" r="7" fill="#9B6FC7" stroke="#3B2A1E" stroke-width="2.2"/>
+      <circle cx="14" cy="32" r="7" fill="#9B6FC7" stroke="#3B2A1E" stroke-width="2.2"/>
+      <circle cx="25" cy="34" r="8" fill="#7A4FA3" stroke="#3B2A1E" stroke-width="2.2"/>
+      <circle cx="36" cy="32" r="7" fill="#8A5FB5" stroke="#3B2A1E" stroke-width="2.2"/>
+      <circle cx="25" cy="45" r="5" fill="#7A4FA3" stroke="#3B2A1E" stroke-width="2.2"/>
+    </symbol>
+    <symbol id="pomelo" viewBox="0 0 50 50">
+      <path d="M25 12 C33 14 38 20 36 28 C34 36 29 38 25 38 C21 38 16 36 14 28 C12 20 17 14 25 12 Z" fill="#F08A5F" stroke="#3B2A1E" stroke-width="2.4"/>
+      <path d="M25 16 L25 34 M25 18 L19 32 M25 18 L31 32" fill="none" stroke="#3B2A1E" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="blueberry" viewBox="0 0 50 50">
+      <circle cx="18" cy="18" r="9" fill="#7A8CC8" stroke="#3B2A1E" stroke-width="2.2"/>
+      <circle cx="32" cy="18" r="9" fill="#8A9CD8" stroke="#3B2A1E" stroke-width="2.2"/>
+      <circle cx="25" cy="33" r="10" fill="#6A7CB8" stroke="#3B2A1E" stroke-width="2.2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ==================== 顶栏 ==================== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="mark">
+      <svg class="figure"><use href="#figure"/></svg>
+      <span>朱洛瑶 · Leah</span>
+    </div>
+    <nav>
+      <a href="#video">视频</a>
+      <a href="#account">账号</a>
+      <a href="#ai">AI 产品</a>
+      <a href="#plan">策划</a>
+      <a href="#okr">OKR</a>
+      <button class="print" onclick="window.print()">打印 / 导出 PDF</button>
+    </nav>
+  </div>
+</div>
+
+<!-- ==================== 头部 ==================== -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-main">
+      <div class="welcome">
+        <svg class="wf"><use href="#strawberry"/></svg>
+        <span>欢迎来到朱洛瑶的作品集，感谢您的阅览</span>
+        <svg class="wf"><use href="#lemon"/></svg>
+      </div>
+      <h1>朱洛瑶 · 作品集<span class="leah">Portfolio</span></h1>
+      <div class="school">同济大学 · 广播电视编导 · 本科应届生</div>
+      <div class="meta">
+        <span><b>5 大板块</b> 视频 / 账号 / AI 产品 / 策划 / OKR</span>
+        <span><b>22 项作品</b> 视频 7 · 账号 5 · 文档 8 · 网站 2</span>
+      </div>
+      <div class="tags">
+        <span class="hot">从内容执行到 AI 产品化</span>
+        <span>视频导演</span>
+        <span>账号运营</span>
+        <span>AI 产品</span>
+        <span>OKR 管理</span>
+      </div>
+    </div>
+    <div class="fig-box">
+      <svg class="figure"><use href="#figure"/></svg>
+      <svg class="doodle d1"><use href="#grape"/></svg>
+      <svg class="doodle d2"><use href="#kiwi"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== 滚动字幕 ==================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span><i></i>视频导演</span>
+    <span><i></i>拍摄剪辑</span>
+    <span><i></i>账号运营</span>
+    <span><i></i>AI 产品</span>
+    <span><i></i>活动策划</span>
+    <span><i></i>OKR 管理</span>
+    <span><i></i>视频导演</span>
+    <span><i></i>拍摄剪辑</span>
+    <span><i></i>账号运营</span>
+    <span><i></i>AI 产品</span>
+    <span><i></i>活动策划</span>
+    <span><i></i>OKR 管理</span>
+  </div>
+</div>
+
+<!-- ==================== 01 视频剪辑拍摄导演 ==================== -->
+<section class="block" id="video">
+  <div class="wrap reveal">
+    <div class="block-head">
+      <div class="teacup-wrap flavor-strawberry">
+        <svg class="teacup"><use href="#teacup"/></svg>
+        <svg class="topfruit"><use href="#strawberry"/></svg>
+        <span class="tlabel">视频创作</span>
+      </div>
+      <span class="no">01</span>
+      <span class="en">Video &amp; Directing</span>
+    </div>
+    <p class="lead">
+      从游戏混剪、MV、短剧情片到预告片与品牌片，独立完成「脚本 → 拍摄 → 导演 → 剪辑 → 包装」<b>全流程</b>。具备<b>导演思维与镜头语言功底</b>，擅长用节奏与情绪讲故事，并探索 <span class="accent">AI 辅助视频生产</span>。
+    </p>
+    <div class="links">
+      <a class="link video" href="https://b23.tv/TrBo2Kp" target="_blank" rel="noopener">
+        <span class="name">游戏剪辑</span>
+        <span class="sub">B 站 · 游戏高光 · 节奏卡点 · 情绪剪辑</span>
+        <span class="go">前往观看 →</span>
+      </a>
+      <a class="link video" href="https://b23.tv/IQeUf2O" target="_blank" rel="noopener">
+        <span class="name">MV 拍摄剪辑</span>
+        <span class="sub">B 站 · 镜头叙事 · 情绪表达 · 画面调度</span>
+        <span class="go">前往观看 →</span>
+      </a>
+      <a class="link video" href="https://b23.tv/Kf1yW0R" target="_blank" rel="noopener">
+        <span class="name">短剧情片剪辑</span>
+        <span class="sub">B 站 · 叙事节奏 · 情绪铺陈 · 起承转合</span>
+        <span class="go">前往观看 →</span>
+      </a>
+      <a class="link video" href="https://b23.tv/vI5bt47" target="_blank" rel="noopener">
+        <span class="name">剧场口播拍摄剪辑</span>
+        <span class="sub">B 站 · 口播拍摄 · 人像布光 · 现场收音</span>
+        <span class="go">前往观看 →</span>
+      </a>
+      <a class="link video" href="https://b23.tv/nHHTT8C" target="_blank" rel="noopener">
+        <span class="name">预告片导演拍摄剪辑</span>
+        <span class="sub">B 站 · 导演统筹 · 预告片节奏 · 团队调度</span>
+        <span class="go">前往观看 →</span>
+      </a>
+      <a class="link video" href="https://b23.tv/cZc0Udm" target="_blank" rel="noopener">
+        <span class="name">线下活动 AI 游戏预告</span>
+        <span class="sub">B 站 · AI 辅助创作 · 活动宣发 · 视觉包装</span>
+        <span class="go">前往观看 →</span>
+      </a>
+      <a class="link video" href="https://xhslink.cn/o/Ar36EFitHfR" target="_blank" rel="noopener">
+        <span class="name">品牌介绍视频</span>
+        <span class="sub">小红书 · 「什么是乐活青创营」· 品牌叙事 · 脚本策划</span>
+        <span class="go">前往观看 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 02 账号运营 ==================== -->
+<section class="block" id="account">
+  <div class="wrap reveal">
+    <div class="block-head">
+      <div class="teacup-wrap flavor-lemon">
+        <svg class="teacup"><use href="#teacup"/></svg>
+        <svg class="topfruit"><use href="#lemon"/></svg>
+        <span class="tlabel">账号运营</span>
+      </div>
+      <span class="no">02</span>
+      <span class="en">Account Operation</span>
+    </div>
+    <p class="lead">
+      多平台内容运营：B 站动漫剪辑平均播放 <span class="num">7 万+</span>、抖音垂类粉丝 <span class="num">3000+</span>、小红书从 <span class="num">0</span> 到 <span class="num">1</span>。沉淀<b>封面 / 标题 / 标签 / 互动</b>四类方法论，具备从选题到发布的完整运营能力与商务沟通经验。
+    </p>
+    <div class="subhead">个人自媒体 · Personal</div>
+    <div class="links">
+      <a class="link" href="https://space.bilibili.com/442909796" target="_blank" rel="noopener">
+        <span class="name">B 站「向阳猪岗村村支书」</span>
+        <span class="sub">动漫剪辑垂类 · 平均播放 7 万+ · 游戏宣传商务沟通</span>
+        <span class="go">前往主页 →</span>
+      </a>
+      <a class="link" href="https://v.douyin.com/XNdCwMiUSrY/" target="_blank" rel="noopener">
+        <span class="name">抖音「瓦达西熬夜冠军!!!」</span>
+        <span class="sub">自拍随拍赛道 · 粉丝 3000+ · 美妆品牌产品寄拍合作</span>
+        <span class="go">前往主页 →</span>
+      </a>
+      <a class="link" href="https://xhslink.cn/o/4Rr7mxB1QDI" target="_blank" rel="noopener">
+        <span class="name">小红书「我心里有话想说」</span>
+        <span class="sub">个人号 · 成长认知类内容 · 收获 601 次赞藏</span>
+        <span class="go">前往主页 →</span>
+      </a>
+    </div>
+    <div class="subhead">乐活工作 · Heytea Work</div>
+    <div class="links">
+      <a class="link" href="https://xhslink.cn/o/5wqJ9I6Adx5" target="_blank" rel="noopener">
+        <span class="name">小红书「乐活青创营」</span>
+        <span class="sub">乐活青创营官方号 · 品牌内容与招募 · 收获 361 次赞藏</span>
+        <span class="go">前往主页 →</span>
+      </a>
+      <div class="link">
+        <span class="name">视频号「乐活OKR」</span>
+        <span class="sub">微信内搜索关注 · 视频号生态无外部链接</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 03 AI 产品 ==================== -->
+<section class="block" id="ai">
+  <div class="wrap reveal">
+    <div class="block-head">
+      <div class="teacup-wrap flavor-grape">
+        <svg class="teacup"><use href="#teacup"/></svg>
+        <svg class="topfruit"><use href="#grape"/></svg>
+        <span class="tlabel">AI 产品</span>
+      </div>
+      <span class="no">03</span>
+      <span class="en">AI Product</span>
+    </div>
+    <p class="lead">
+      用 AI 落地业务：独立撰写 <span class="num">3</span> 份 PRD，基于 COZE + RAG 搭建内容自动化工具，用 Claude Code + Docker 从 <span class="num">0</span> 到 <span class="num">1</span> 上线官网与招聘站；兼具<b>内容产品设计（文旅 IP 剧本）与工程化落地能力</b>。
+    </p>
+    <div class="subhead">产品文档 · Product Docs</div>
+    <div class="links">
+      <a class="link doc" href="docs/prd-multi-tag-analysis.pdf" target="_blank" rel="noopener">
+        <span class="name">乐活多维标签分析 PRD</span>
+        <span class="sub">飞书多维表单 · 爆款标签数据工具 · 经验驱动转数据驱动</span>
+        <span class="go">点击预览 →</span>
+      </a>
+      <a class="link doc" href="docs/prd-wechat-ai-creation.pdf" target="_blank" rel="noopener">
+        <span class="name">乐活 OKR 公众号 AI 创作自动化 PRD</span>
+        <span class="sub">Coze + RAG · 知识库 · 内容生产自动化</span>
+        <span class="go">点击预览 →</span>
+      </a>
+      <a class="link doc" href="docs/prd-video-ops-automation.pdf" target="_blank" rel="noopener">
+        <span class="name">乐活视频号运营规范迭代自动化 PRD</span>
+        <span class="sub">飞书问卷 + 多维表格 + 机器人 · 问题闭环管理</span>
+        <span class="go">点击预览 →</span>
+      </a>
+      <a class="link doc" href="docs/tulou-culture-script.pdf" target="_blank" rel="noopener">
+        <span class="name">福建土楼地方文旅合作 · 原创剧本与产品设计</span>
+        <span class="sub">《蝴蝶的归途》· 客家文化 IP · 内容产品化</span>
+        <span class="go">点击预览 →</span>
+      </a>
+    </div>
+    <div class="subhead">网站开发 · Web Dev</div>
+    <div class="links">
+      <a class="link site" href="https://www.ilohhas.com/" target="_blank" rel="noopener">
+        <span class="name">乐活品牌官网</span>
+        <span class="sub">www.ilohhas.com · 产品介绍页从 0 到 1 上线</span>
+        <span class="go">前往网站 →</span>
+      </a>
+      <a class="link site" href="https://zly523.github.io/lehuoxiaozhen/" target="_blank" rel="noopener">
+        <span class="name">乐活招聘网站</span>
+        <span class="sub">lehuoxiaozhen · 招募报名页 · 独立开发部署</span>
+        <span class="go">前往网站 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 04 策划 ==================== -->
+<section class="block" id="plan">
+  <div class="wrap reveal">
+    <div class="block-head">
+      <div class="teacup-wrap flavor-orange">
+        <svg class="teacup"><use href="#teacup"/></svg>
+        <svg class="topfruit"><use href="#orange"/></svg>
+        <span class="tlabel">活动策划</span>
+      </div>
+      <span class="no">04</span>
+      <span class="en">Campaign Planning</span>
+    </div>
+    <p class="lead">
+      从创意到落地的完整策划能力：设计<b>「一天一夜沉浸式综艺面试」</b>（狼人杀 / 围炉夜话），策划 <span class="num">22</span> 页大学生综艺方案（无用技能大赛、舞蹈狼人杀等 <span class="num">12+</span> 游戏环节），统筹<b>预算、流程、道具与人员分工</b>。
+    </p>
+    <div class="links">
+      <a class="link doc" href="docs/plan-recruitment.pdf" target="_blank" rel="noopener">
+        <span class="name">乐活招募活动策划方案</span>
+        <span class="sub">一天一夜 · 综艺式面试 · 狼人杀 + 围炉夜话</span>
+        <span class="go">点击预览 →</span>
+      </a>
+      <a class="link doc" href="docs/plan-variety-show.pdf" target="_blank" rel="noopener">
+        <span class="name">乐活综艺策划案</span>
+        <span class="sub">22 页完整方案 · 12+ 游戏环节 · 流程与道具设计</span>
+        <span class="go">点击预览 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 05 OKR 管理 ==================== -->
+<section class="block" id="okr">
+  <div class="wrap reveal">
+    <div class="block-head">
+      <div class="teacup-wrap flavor-blueberry">
+        <svg class="teacup"><use href="#teacup"/></svg>
+        <svg class="topfruit"><use href="#blueberry"/></svg>
+        <span class="tlabel">OKR 管理</span>
+      </div>
+      <span class="no">05</span>
+      <span class="en">OKR Management</span>
+    </div>
+    <p class="lead">
+      以 OKR 驱动自我管理，形成<b>「日 — 周 — 月 — 季 — 年」复盘闭环</b>：每日飞书 PMS 日报、每周例会复盘、每月 OKR 会议对齐目标，用数据衡量完成度、沉淀个人习得与可复用 SOP。
+    </p>
+    <div class="links">
+      <a class="link doc" href="docs/okr-review-0703.pdf" target="_blank" rel="noopener">
+        <span class="name">OKR 周期总结复盘 · 2026.07</span>
+        <span class="sub">青创营品宣 + COZE「大咖说」学习实践 · 目标拆解与复盘</span>
+        <span class="go">点击预览 →</span>
+      </a>
+      <a class="link doc" href="docs/okr-review-0806.pdf" target="_blank" rel="noopener">
+        <span class="name">OKR 周期总结复盘 · 2026.08</span>
+        <span class="sub">小红书运营基本功 + C 号装修 · 数据衡量与迭代</span>
+        <span class="go">点击预览 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 页脚 ==================== -->
+<footer>
+  <div class="wrap">
+    <svg class="figure fig"><use href="#figure"/></svg>
+    <p>朱洛瑶 · Leah · 灵感出品 · 作品集</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    els.forEach(function (el) { el.classList.add('is-anim'); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    els.forEach(function (el) { io.observe(el); });
+    setTimeout(function () {
+      els.forEach(function (el) { el.classList.add('in'); });
+    }, 2000);
+  })();
+</script>
+
+</body>
+</html>
